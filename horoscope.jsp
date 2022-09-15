@@ -134,8 +134,17 @@
    <body>
       <div class="container">
          <img src="img/head.webp" class="img-fluid">
-         <h1 class="text-center my-5"> Welcome! Please Enter your birthday</h1>
-         <form action="horoscope.jsp">
+         <% if (month != null && day != null)  {%>
+         <div class="text-center mt-5">
+            <h2>Your Zodiac Sign is</h1>
+            <img class="img-fluid" src="img/<%= zodiac_sign(parsedMonth, parsedDay)%>.jpg" />
+            <h2> Your horoscope for this week is: </h2>
+            <div class="horoscope"><span><%= phrases[parsedMonth-1] %></span></div>
+         </div>
+         <% } %>
+
+         <h1 class="text-center my-5"> Welcome! Please enter your birthday!</h1>
+         <form action="horoscope.jsp" method="post">
             <div class="row">
                <div class="mb-3 col">
                   <label for="day" class="form-label">Day</label>
@@ -165,14 +174,6 @@
             </div>
 
          </form>
-         <% if (month != null && day != null)  {%>
-         <div class="text-center">
-            <h2>Your Zodiac Sign is</h1>
-            <img class="img-fluid" src="img/<%= zodiac_sign(parsedMonth, parsedDay)%>.jpg" />
-            <h2> Your horoscope for this week is: </h2>
-            <div class="horoscope"><span><%= phrases[parsedMonth-1] %></span></div>
-         </div>
-         <% } %>
 
       </div>
 
