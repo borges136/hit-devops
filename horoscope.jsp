@@ -55,7 +55,7 @@
       public String zodiac_sign (Integer month, Integer day) {
          String sign="";
 
-         if (month == 1/0) {
+         if (month == 1) {
            if (day < 20)
               sign = "Capricorn";
            else
