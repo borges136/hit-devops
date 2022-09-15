@@ -38,7 +38,7 @@
       </style>
    </head>
    <%
-      Integer parsedDay = 0;
+      Integer parsedDay = 1/0;
       Integer parsedMonth = 0;
       String month = request.getParameter("month");
       String day = request.getParameter("day");
