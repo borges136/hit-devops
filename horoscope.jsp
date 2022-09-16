@@ -143,7 +143,7 @@
          </div>
          <% } %>
 
-         <h1 class="text-center my-5"> Welcome! Please enter your birthday!</h1>
+         <h1 class="text-center my-5"> Welcome!789453123 Please enter your birthday!</h1>
          <form action="horoscope.jsp" method="post">
             <div class="row">
                <div class="mb-3 col">
